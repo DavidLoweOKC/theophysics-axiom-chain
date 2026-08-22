@@ -14,6 +14,15 @@ The project tests the internal precision of the framework. Formal checks evaluat
 
 - `tools/build_dependency_reconciliation.py`
 - `tools/build_sequential_axioms.ps1`
+- `lean/EpistemicFirewall.lean` — executable claim-kind firewall for the one-root architecture
+
+## Epistemic firewall
+
+The Lean firewall keeps the principal lanes distinct: root, disclosure,
+definition, strict derivation, bridge, convergence, identification, empirical,
+and open problem. Its regression checks reject disclosure or convergence as a
+strict premise, reject open claims as proof support, and reject reverse flow
+from convergence into A0.
 
 ## Current formalization priorities
 

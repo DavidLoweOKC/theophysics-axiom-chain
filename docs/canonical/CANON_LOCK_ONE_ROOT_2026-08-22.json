@@ -1,0 +1,43 @@
+{
+  "lock_schema": "1.0.0",
+  "locked_at": "2026-08-22",
+  "architecture": "one-root-epistemic-firewall",
+  "governing_root": {
+    "id": "A0",
+    "statement": "God is",
+    "count": 1
+  },
+  "projection": {
+    "source_records": 191,
+    "formal_claims": 192,
+    "typed_edges": 300,
+    "legacy_multi_root_candidates_reclassified_as_bridges": [
+      "A5.1",
+      "BC4",
+      "BC6",
+      "BC7",
+      "BC8"
+    ]
+  },
+  "validation": {
+    "lean_version": "4.31.0",
+    "compile_exit_code": 0,
+    "exactly_one_root": true,
+    "all_edge_endpoints_exist": true,
+    "entailment_graph_acyclic": true,
+    "all_strict_claims_trace_to_A0": true,
+    "unrooted_strict_claims": [],
+    "epistemic_firewall_passes": true,
+    "canon_ready": true,
+    "sorry_admit_axiom_opaque_scan": "clear",
+    "printed_theorem_axiom_dependencies": "none"
+  },
+  "sha256": {
+    "docs/canonical/AXIOMS_CANONICAL_ONLY.md": "2707631276d56b28f8be5516d7a332a6976cc27c06cc28a45c1fd37fc899889d",
+    "lean/EpistemicFirewall.lean": "75d4a8c83e86d20c636f6302610d569d36173e752659bbc7ce911151f86647b9",
+    "lean/CanonicalGraph.lean": "dfb636a6c23e53a976146a1c2e0fbdc6885caef67b18b987b9c8b225fc6bf493",
+    "tools/generate_canonical_lean_graph.ps1": "6c46d69d01361e4374ffb7a2c799f25b313ed978868b4ebebbfb925d473b1eed",
+    "lean-toolchain": "efac0b94923b2d8b6840cd35be9177ad0fc5ab2332f4f4311c98712cee92fdee"
+  },
+  "boundary": "This lock certifies graph architecture, epistemic typing, provenance hashes, and executable Lean invariants. Candidate claims remain candidates; it does not convert theological, empirical, bridge, or model claims into strict proofs."
+}

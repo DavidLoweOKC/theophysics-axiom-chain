@@ -6,6 +6,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .lake/
+*.olean
 build/
 dist/
 out/
