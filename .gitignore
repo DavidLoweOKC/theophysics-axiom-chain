@@ -1,0 +1,22 @@
+# Local and generated material
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.lake/
+build/
+dist/
+out/
+
+# Editor and operating-system state
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated research and private vault material
+API_REVIEWS/
+media/
+.obsidian/
