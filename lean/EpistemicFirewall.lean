@@ -109,6 +109,9 @@ def allEdgeEndpointsExist (claims : List Claim) (edges : List Edge) : Bool :=
 def rootCount (claims : List Claim) : Nat :=
   (claims.filter fun claim => claim.kind == .root).length
 
+def claimKindCount (claims : List Claim) (kind : ClaimKind) : Nat :=
+  (claims.filter fun claim => claim.kind == kind).length
+
 def hasExactlyA0AsRoot (claims : List Claim) : Bool :=
   rootCount claims == 1 && claims.any fun claim => claim == A0
 

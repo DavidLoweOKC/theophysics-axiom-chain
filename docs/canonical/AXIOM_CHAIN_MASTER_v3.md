@@ -2,11 +2,11 @@
 
 > **Canonical classification source:** [[AXIOMS_PART1_MODE_CLASSIFICATION]] **Architecture:** [[___AXIOM/___THE_AXIOM_CHAIN/Secondary/CONSILIENCE_ATLAS_UNIFIED_SYSTEM_CANON_v1_0_FREEZE_CANDIDATE]] — FROZEN Uses proper IDs (A1.1, D2.1, T3.1, BC4a) not flat AX-### numbering.
 
-> **LEAN AUDIT STATUS (2026-08-22): CANON LOCK OPEN.** The Lean projection has one designated graph root, `A0 — God is`, and zero Lean axiom dependencies in its structural theorems. This does **not** prove `God is` from no assumptions; `A0` is currently graph data, not a proposition. The older "four irreducible primitives" language below is retained as historical chain prose and is superseded for the Lean architecture by the one-root ruling.
+> **LEAN AUDIT STATUS (2026-08-22): STRUCTURAL GATE PASSES; VERSION SEAL PENDING.** The Lean projection has one designated graph root, `A0 — God is`, and zero Lean axiom dependencies in its structural theorems. This does **not** prove `God is` from no assumptions; `A0` is currently graph data, not a proposition. The older "four irreducible primitives" language below is a chain-grade classification and is superseded for the Lean root architecture by the one-root ruling.
 >
-> **Current machine findings:** Lean 4.33.0 compiles the firewall, semantic boundary, and 192-claim/300-edge projection with no `sorry`, `admit`, or declared Lean `axiom`. Grade propagation correctly rejects `A2.2 → T3.1` because `A2.2` is `FW_EXTENDED` while `T3.1` is presented as derived. Consequently `T3.1` and `BC2` are unresolved strict claims and the canon lock remains open. The semantic module supplies a countermodel to the claim that T3.1 + T3.2 alone yields an external restorer; causal exhaustiveness closes the external-restorer inference, while identifying that restorer as Grace remains a separate theological bridge.
+> **Current machine findings:** Lean 4.33.0 compiles the firewall, semantic boundary, and exact 197-claim/262-edge audit projection with no `sorry`, `admit`, or declared Lean `axiom`. Weakest-premise propagation passes after `T3.1`, `BC2`, `BC7`, and `BC8` are demoted to `FW_EXTENDED`; `AX_DERIVED` remains live with zero current members. The semantic module supplies a countermodel to the claim that T3.1 + T3.2 alone yields an external restorer; causal exhaustiveness closes the external-restorer inference, while identifying that restorer as Grace remains a separate theological bridge.
 >
-> **Count status:** the 198-entry summary is not yet reconciled to an enumerable 198-row registry. The current canonical assembly contains 191 source records; Lean adds synthetic A0 for 192 formal claims. Explicit v3 additions/splits absent from that assembly include `A1.0`, `T3.2`, and the replacement of `BC4` by `BC4a` plus `BC4b`. The declared six-record delta cannot yet be named from an authoritative row ledger, so count reconciliation remains an open gate.
+> **Count status:** the graph audit parses 191 rows with `SC-*` collapsed once. Expanding the six source-backed scale records yields 196 kept entries. The historical `DROP_DUPLICATE` row produces 197 bookkeeping rows. Lean excludes the dropped duplicate and adds synthetic `A0`, also yielding 197 formal claims. The former total of 198 assumed seven scale records, but only six are enumerated in the source; it was one high.
 
 ---
 
@@ -32,24 +32,26 @@ BC4a  Three Roles Required         → FW_EXTENDED (needs proof — derivation m
 
 ## **Why:** Labels and arrows were repaired (Grok v1, 2026-08-17). Entailment was not. A primitive cannot be marked "stance." A derivation cannot outrank its weakest premise. A thing cannot be bedrock and optional at the same time. These four nodes remain load-bearing in the chain — they are not deleted. They are demoted until they earn CORE grade through written entailment. **What does not change:** [[___AXIOM/_THE_AXIOM_DOCUMENT]] (the theology — A0, four debts, 15 subclauses, K-path) is unaffected. The demotions are chain-engineering, not theology.
 
-## MODE SUMMARY — 198 Entries, 6 Modes
+## MODE SUMMARY — 197 Bookkeeping Entries, 6 Modes
 
-_(Updated 2026-08-20: CORE reduced from 7 to 4 primitives. A2.2, A5.1, BC6 demoted to FW_EXTENDED. BC4a demoted from AX_DERIVED to FW_EXTENDED. A2.1 depends_on changed from A1.3 to A1.0.)_
+_(Updated 2026-08-22: all four former AX_DERIVED entries were demoted under the weakest-premise rule; D11.1 was reconciled to its later "measurement bridge" ruling; SC-* was expanded to the six enumerated scale records.)_
 
 | Mode                                                                                                                                                                                                                    | Count   | What it is                                                            | Epistemic status                                   |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------- | -------------------------------------------------- |
 | `AX_CORE`                                                                                                                                                                                                               | 4       | Irreducible primitives (A1.0, A1.1, A1.2, A2.1)                       | Bedrock — undeniable without self-contradiction    |
-| `AX_DERIVED`                                                                                                                                                                                                            | 4       | Derivable from core (BC2, BC7, BC8, T3.1)                             | Must trace to core with written entailment         |
+| `AX_DERIVED`                                                                                                                                                                                                            | 0       | Live grade; no current members                                         | Re-entry requires core-grade premises or written entailment from bedrock |
 | `AX_SCAFFOLD`                                                                                                                                                                                                           | 43      | Definitions & equations                                               | Formalization machinery                            |
-| `FW_EXTENDED`                                                                                                                                                                                                           | 111     | Framework commitments (A2.2, A5.1, BC6, BC4a added from CORE/DERIVED) | Claims, stances, boundary assertions — not bedrock |
+| `FW_EXTENDED`                                                                                                                                                                                                           | 114     | Framework commitments, stance-capped derivations, and boundary assertions | Claims and models — not bedrock |
 | `HY_EVIDENCE`                                                                                                                                                                                                           | 35      | Evidence/protocols/predictions                                        | Testable layer                                     |
 | `DROP_DUPLICATE`                                                                                                                                                                                                        | 1       | Duplicate row                                                         | Kill                                               |
-| **TOTAL**                                                                                                                                                                                                               | **198** |                                                                       |                                                    |
-| **Delta accounting (v2.2, 2026-08-20):** AX_CORE 7→4 (−A2.2, −A5.1, −BC6). AX_DERIVED 5→4 (−BC4a). FW_EXTENDED 107→111 (+A2.2, +A5.1, +BC6, +BC4a). All other counts unchanged. Sum: 4 + 4 + 43 + 111 + 35 + 1 = 198 ✓. |         |                                                                       |                                                    |
+| **TOTAL**                                                                                                                                                                                                               | **197** |                                                                       |                                                    |
+| **Reconciled accounting (2026-08-22):** 4 + 0 + 43 + 114 + 35 + 1 dropped duplicate = 197. Kept entries = 196. Lean adds A0 and excludes the duplicate = 197 formal claims. | | | |
 
 ---
 
 ## THE DEPENDENCY TREE — Root to Leaf
+
+> **Tier semantics:** tiers are thematic groupings, not strict topological layers. Tier 6 and later contain independent framework roots.
 
 ### Tier 0: Roots (no dependencies)
 
@@ -84,6 +86,8 @@ A2.1 Substrate Requirement      ← A1.0         [AX_CORE]
 A2.2 Self-Grounding             ← A2.1         [FW_EXTENDED]
 ```
 
+**Stance propagation note:** A2.2 is a framework commitment. Every entry whose support path depends on A2.2 inherits a framework ceiling unless it also has an independent core-grade entailment. This applies symmetrically with the A5.1 stance ruling.
+
 ### Tier 3: Field Definitions (depend on A2.2)
 
 ```
@@ -107,7 +111,7 @@ E3.1 Master Coherence Equation  ← A2.2         [AX_SCAFFOLD]
 E3.2 Universal Coherence Def    ← A2.2         [AX_SCAFFOLD]
 P3.1 Coherence Non-Negativity   ← A2.2         [FW_EXTENDED]
 P3.2 Coherence Conservation     ← A2.2         [FW_EXTENDED]
-T3.1 Coherence Cannot Self-Inc  ← A2.2         [AX_DERIVED]
+T3.1 Coherence Cannot Self-Inc  ← A2.2         [FW_EXTENDED — derivation written; premise grade caps classification]
 T3.2 Moral ≠ Thermal Order      ← T3.1         [FW_EXTENDED — NEW, per Grok Repair 6.
   Fills the grace gap: T3.1 alone does not get you to BC2 (external input required for
   coherence restoration is not automatically Grace — a star, a meal, a heat bath are
@@ -135,7 +139,7 @@ LN4.1 Universe As Compression   ← A2.2         [FW_EXTENDED]
 **Stance propagation note (Repair 5):** A5.1 is marked STANCE (Copenhagen-family interpretation; MWI, Bohm, GRW are live alternatives). Every entry in this tier and Tier 7 that depends ONLY on A5.1 (and no other root) inherits stance-grade confidence, not core-grade confidence. This applies explicitly to LN5.1, and to D5.1–D5.3/P5.1–P5.2/EXP5.1–5.2 insofar as they presuppose observer-collapse specifically.
 
 ```
-A5.1 Observation Requirement    ← (core root)   [FW_EXTENDED]
+A5.1 Observation Requirement    ← (graph root, FW_EXTENDED stance) [FW_EXTENDED]
 A5.2 Participatory Universe     ← A5.1          [FW_EXTENDED]
 D5.1 Observer Definition        ← A5.1          [AX_SCAFFOLD]
 D5.2 Integrated Information Φ   ← A5.1          [AX_SCAFFOLD]
@@ -176,9 +180,9 @@ BC1 Observation Chain Terminates in Self-Grounding Act ← LN6.1, A7.1 [FW_EXTEN
    but a type change τ: Observer → Self-Grounding-Act. BC1 asserts τ exists and
    is unique. This reconciles BC1 with the Watcher argument instead of contradicting it,
    and makes BC1 independent of A5.1's observer-collapse interpretation specifically.)
-BC2 Grace External To System    ← T3.1, T3.2     [AX_DERIVED]  (now requires T3.1 + T3.2, see Repair 6)
+BC2 Grace External To System    ← T3.1, T3.2     [FW_EXTENDED — premise grade caps classification]
 BC3 Measurement Orthogonality   ← A5.1, A6.2      [FW_EXTENDED]
-BC4a Three Roles Required       ← (core root)   [FW_EXTENDED — reclassified from AX_DERIVED,
+BC4a Three Roles Required       ← (graph root, FW_EXTENDED framework) [FW_EXTENDED — reclassified from AX_DERIVED,
   per Repair 4. "Complete self-referential knowledge requires exactly three irreducible
   functional roles (knower, known, knowing)." Derived from the structure of self-reference
   (Augustine, De Trinitate). Defensible as a formal claim but derivation not yet written.]
@@ -187,9 +191,9 @@ BC4b Three Roles = Trinity      ← BC4a          [FW_EXTENDED — NEW split ent
   structurally motivated, not deductively forced. This was the second, non-derivable half of
   the old single BC4 entry.]
 BC5 Superposition Preserved     ← BC4a          [FW_EXTENDED]
-BC6 Infinite Energy Source       ← (core root)   [FW_EXTENDED]
-BC7 Information Conservation     ← BC6           [AX_DERIVED]
-BC8 Voluntary Coupling           ← BC6           [AX_DERIVED]
+BC6 Infinite Energy Source       ← (boundary root, FW_EXTENDED) [FW_EXTENDED]
+BC7 Information Conservation     ← BC6           [FW_EXTENDED — derivation written; premise grade caps classification]
+BC8 Voluntary Coupling           ← BC6           [FW_EXTENDED — derivation written; premise grade caps classification]
 BC9 Opacity Requirement         ← BC4a, BC6      [FW_EXTENDED]
 ```
 
@@ -197,7 +201,7 @@ BC9 Opacity Requirement         ← BC4a, BC6      [FW_EXTENDED]
 
 ```
 ID7.1 Terminal Observer = God    ← BC6           [FW_EXTENDED] ← IDENTIFICATION/BRIDGE
-PERSONHOOD                       ← BC6           [FW_EXTENDED] ← AXIOMATIC GAP flagged
+ID7.2 Personhood                 ← BC6           [FW_EXTENDED] ← formerly ID-less PERSONHOOD; AXIOMATIC GAP retained
 A8.1 Binary Distinction          ← BC6           [FW_EXTENDED]
 A8.2 Sign Conservation           ← BC6           [FW_EXTENDED]
 D8.1 Sign Operator               ← BC6           [AX_SCAFFOLD]
@@ -231,7 +235,7 @@ P10.1 Soul Continuity            ← BC6           [FW_EXTENDED]
 P10.2 Soul Identity Persistence  ← BC6           [FW_EXTENDED]
 A11.1 Moral Realism              ← BC6           [FW_EXTENDED]
 A11.2 Coherence-Morality Identity ← BC6          [FW_EXTENDED]
-D11.1 Moral Coherence Definition ← BC6           [AX_SCAFFOLD]
+D11.1 Moral Coherence Bridge     ← BC6           [FW_EXTENDED — reconciled to Tier 17 measurement-bridge ruling]
 T11.1 Virtue As High Φ           ← BC6           [FW_EXTENDED]
 T11.2 Vice As Decoherence        ← BC6           [FW_EXTENDED]
 A12.1 Asymptotic Behavior        ← BC6           [FW_EXTENDED]
@@ -460,7 +464,7 @@ A5.1 ──┬── D5.*, P5.* (observer)  [STANCE-propagated, Repair 5]
 BC4a ──┬── BC4b (Trinity identification, Repair 4), BC5, BC9, INV9
         │
 BC6 ───┬── BC7, BC8
-        ├── ID7.1, PERSONHOOD (identification)
+        ├── ID7.1, ID7.2 Personhood (identification)
         ├── A8.*, D8.1, T8.1, C8.* (sign)
         ├── A9.*, D9.1, E9.1, P9.* (grace)
         ├── A10.*, D10.1, E10.1, P10.* (soul)
@@ -482,7 +486,7 @@ BC6 ───┬── BC7, BC8
 - Repair 4 — BC4 split into BC4a (Three Roles Required, FW_EXTENDED) and BC4b (Three Roles = Trinity, FW_EXTENDED identification claim).
 - Repair 5 — A5.1 stance propagation made explicit: everything depending only on A5.1 (Tiers 6–7) inherits stance-grade, not core-grade, confidence.
 - Repair 6 — T3.2 (Moral ≠ Thermal Order) added as new FW_EXTENDED entry, filling the T3.1 → BC2 grace gap.
-- Repair 7 — T16.1 corrected from "Christianity 8/8 BCs" to "Christianity 9/9 BCs," with BC9 (Opacity Requirement) explicitly included in its dependency list. Net effect: Strict Core reduced to 4 irreducible primitives. Total entry count 198. Anchor repair complete (0 unanchored).
+- Repair 7 — T16.1 corrected from "Christianity 8/8 BCs" to "Christianity 9/9 BCs," with BC9 (Opacity Requirement) explicitly included in its dependency list. Net effect: Strict Core reduced to 4 irreducible primitives. Reconciled bookkeeping count 197. Anchor repair complete (0 unanchored).
 
 ### 1. BC6 is the most load-bearing node
 
@@ -546,7 +550,7 @@ A2.2 (Self-Grounding) and A5.1 (Observation Requirement) are framework commitmen
 %%tag::Dependency::aed1d52c-32ed-4222-81e6-7c101f2e9a00::"BC6 is root for Tiers 9-12"::null::@Engineering%%
 %%tag::Dependency::13100df2-abfa-4f0d-9158-a7f1fa8a7eab::"ID7.1 depends on BC6"::null::@Engineering%%
 %%tag::Dependency::93f69ae1-beeb-41c6-93af-f2745060f6fe::"T16.1 depends on BC1-BC9"::null::@Engineering%%
-%%tag::Metric::e956f9b3-6f08-4acf-9f5c-b2a98e53ab26::"198 total entries in the axiom chain"::null::@Engineering%%
+%%tag::Metric::e956f9b3-6f08-4acf-9f5c-b2a98e53ab26::"197 reconciled bookkeeping entries in the axiom chain"::null::@Engineering%%
 %%tag::Metric::332dcb21-2875-4dd1-b398-34e1c66de2a0::"AX_CORE count reduced from 7 to 4"::null::@Engineering%%
 %%tag::Metric::518273bb-98a7-42db-803f-276f57a16210::"AX_DERIVED count reduced from 5 to 4"::null::@Engineering%%
 %%tag::Metric::45de5497-0703-4459-bbd0-4f7e81b526cf::"FW_EXTENDED count increased from 107 to 111"::null::@Engineering%%
@@ -554,5 +558,5 @@ A2.2 (Self-Grounding) and A5.1 (Observation Requirement) are framework commitmen
 %%tag::Stakeholder::0dcb6169-f285-4e3a-a649-f5a633f75b16::"Grok v1 - performed label and arrow repairs"::null::@Engineering%%
 %%tag::Stakeholder::621c88dc-9b57-42b3-9c46-948abfc515a7::"Watcher - compatibility concern for BC1"::null::@Engineering%%
 %%tag::OpenQuestion::07e8b317-3e02-499c-b773-721d4c3cb0df::"OPEN17.1 AI Moral Status Question"::null::@Engineering,Legal%%
-%%tag::OpenQuestion::7ef6753f-e273-4791-b2b4-1d4112d0ef36::"PERSONHOOD axiomatic gap flagged"::null::@Engineering%%
+%%tag::OpenQuestion::7ef6753f-e273-4791-b2b4-1d4112d0ef36::"ID7.2 Personhood axiomatic gap flagged"::null::@Engineering%%
 %%--- END SEMANTIC TAGS ---%%

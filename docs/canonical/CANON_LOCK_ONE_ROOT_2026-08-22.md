@@ -1,41 +1,35 @@
 # One-Root Canon Audit — 2026-08-22
 
-## Status: OPEN
+## Status: STRUCTURAL GATE PASSES; VERSION SEAL PENDING
 
-The earlier lock result is revoked. It certified structural checks before the
-weakest-premise grade rule was implemented.
+Lean 4.33.0 verifies the corrected graph projection from the per-entry v3 audit.
 
-## Reproduced result
-
-- Lean: `4.33.0`
-- Source records: `191`
-- Formal graph claims: `192` (`A0` plus 191 source records)
-- Typed edges: `300`
-- Logical axiom dependencies printed by Lean: none
-- `sorry` / `admit` / declared Lean `axiom`: none
+- Parsed audit rows: `191` (`SC-*` collapsed)
+- Kept entries after six-scale expansion: `196`
+- Formal claims: `197` (synthetic `A0` plus 196 kept entries)
+- Typed declared edges: `262`
+- `AX_CORE / AX_DERIVED / AX_SCAFFOLD / FW_EXTENDED / HY_EVIDENCE`:
+  `4 / 0 / 43 / 114 / 35`
 - One designated graph root: pass (`A0 — God is`)
-- Endpoints: pass
-- Entailment acyclicity: pass
-- Grade propagation: **fail as expected**
-- Rejected grade edge: `A2.2 → T3.1`
-- Unresolved strict claims: `T3.1`, `BC2`
-- BC6 strict descendants under propagating dependency edges: `[]`
-- Semantic `T3.1 + T3.2 → external restorer`: refuted by countermodel
-- External restorer with causal exhaustiveness: proved
-- External restorer = Grace: explicit bridge premise required
-- Count reconciliation: open (`198` declared versus `191` enumerable records)
+- All edge endpoints resolve: pass
+- Entailment graph acyclic: pass
+- Weakest-premise grade propagation: pass
+- All strict claims trace to A0: pass
+- BC6 strict descendants: `[]`
+- `sorry` / `admit` / declared Lean `axiom`: none
+- Printed theorem axiom dependencies: none
 
-## BC6 ceiling ruling
+## Semantic boundary
 
-BC6 remains framework-grade. The current projection contains no strict-derived
-descendant of BC6 across entailment, definition, assumption, or identification
-edges. Its downstream theology, soul, moral, eschatology, and unification lanes
-therefore remain framework/candidate material rather than inherited strict
-proofs.
+The structural gate does not make BC2 a strict semantic theorem. The separate
+Lean module verifies a countermodel to `T3.1 + T3.2 → external restorer` under
+the current meanings. An external restorer follows only after adding causal
+exhaustiveness. Identifying that restorer as Grace remains a theological bridge.
 
-## Lock conditions
+## Version boundary
 
-The lock may close only after the grade edge, BC2 semantics/classification, and
-record-count discrepancy are repaired and the full suite recompiles with the
-grade gate returning true. Until then, Lean certifies detection of the open
-gates—not passage of the full axiom chain.
+No authoritative `VERSION_REGISTRY.yaml` was found in the canonical repository,
+OPUS tree, Z tree, or bounded canon locations. The corrected active document
+remains v3; it is not falsely stamped v2.3 or v3.1. Final version seal requires
+locating or reconstructing the authoritative registry through an explicit
+version ruling.

@@ -1,7 +1,7 @@
 {
-  "lock_schema": "1.1.0",
+  "lock_schema": "1.2.0",
   "audited_at": "2026-08-22",
-  "status": "open",
+  "status": "structural-pass-version-seal-pending",
   "architecture": "one-root-epistemic-firewall",
   "governing_root": {
     "id": "A0",
@@ -10,11 +10,19 @@
     "representation": "graph-data-not-logical-axiom"
   },
   "projection": {
-    "source_records": 191,
-    "formal_claims": 192,
-    "typed_edges": 300,
-    "declared_master_count": 198,
-    "count_reconciled": false
+    "parsed_audit_rows_sc_collapsed": 191,
+    "kept_records_after_six_scale_expansion": 196,
+    "formal_claims_with_A0": 197,
+    "typed_declared_edges": 262,
+    "bookkeeping_total_with_dropped_duplicate": 197,
+    "mode_counts": {
+      "AX_CORE": 4,
+      "AX_DERIVED": 0,
+      "AX_SCAFFOLD": 43,
+      "FW_EXTENDED": 114,
+      "HY_EVIDENCE": 35,
+      "DROP_DUPLICATE": 1
+    }
   },
   "validation": {
     "lean_version": "4.33.0",
@@ -22,14 +30,19 @@
     "exactly_one_root": true,
     "all_edge_endpoints_exist": true,
     "entailment_graph_acyclic": true,
-    "grade_propagation_passes": false,
-    "grade_violations": [["A2.2", "T3.1"]],
-    "all_strict_claims_trace_to_A0": false,
-    "unrooted_strict_claims": ["T3.1", "BC2"],
+    "grade_propagation_passes": true,
+    "grade_violations": [],
+    "all_strict_claims_trace_to_A0": true,
+    "unrooted_strict_claims": [],
     "bc6_strict_descendants": [],
-    "canon_ready": false,
+    "structural_gate_ready": true,
     "sorry_admit_declared_axiom_scan": "clear",
     "printed_theorem_axiom_dependencies": "none"
+  },
+  "classification_rulings": {
+    "demoted_to_FW_EXTENDED": ["T3.1", "BC2", "BC7", "BC8", "D11.1"],
+    "renamed": {"PERSONHOOD": "ID7.2"},
+    "AX_DERIVED_reentry": "core-grade premises or written entailment from bedrock"
   },
   "semantic_boundary": {
     "t3_1_plus_t3_2_entails_external_restorer": false,
@@ -37,15 +50,20 @@
     "external_restorer_with_causal_exhaustiveness": true,
     "external_restorer_identified_as_grace": "bridge-premise-required"
   },
+  "version_seal": {
+    "status": "pending",
+    "reason": "authoritative VERSION_REGISTRY.yaml not found",
+    "forbidden_unverified_stamps": ["v2.3", "v3.1"]
+  },
   "sha256": {
-    "docs/canonical/AXIOMS_CANONICAL_ONLY.md": "2707631276d56b28f8be5516d7a332a6976cc27c06cc28a45c1fd37fc899889d",
-    "docs/canonical/AXIOM_CHAIN_MASTER_v3.md": "285fde61186f2287acc214e2fb047c65d0b3e401923ea02172c30adea5ae58ab",
-    "docs/canonical/AXIOM_CHAIN_CANONICAL_WORKBOOK.xlsx": "a4a124b19848dff5e2675d7c5ad23ea5aa250bf6f506a8061d2fe81f934cb2d4",
-    "lean/EpistemicFirewall.lean": "f27f1129f7613c9337a5bf2b06c9fa8cf9d02a68f5fc79ffe30a93df6eaa75f7",
+    "docs/canonical/axiom_chain_v3_audit.csv": "2c5449a71f59604e33a64acf267828edbb94ee170c029673e43cf69fdff775d3",
+    "docs/canonical/AXIOM_CHAIN_MASTER_v3.md": "617f0ea7fa1b95b3110b741d1adc00485bd8390059faed70638de83761d58a5d",
+    "docs/canonical/AXIOM_CHAIN_CANONICAL_WORKBOOK.xlsx": "235397209f1e242455ca79f405f8b116550c82cd7ca0751a1a3003ae3e6e9074",
+    "lean/EpistemicFirewall.lean": "4cdfed5b93866e86988594869c35cd86594349c9b160cda7c7c145fbc63728f2",
     "lean/T3GraceSemantics.lean": "979cfc42141c7d66b210b612cd38474cdb9e644907a483ddb8ed120b81cb0651",
-    "lean/CanonicalGraph.lean": "e98e1c784644ac863785aa0b73b743c64c877d111d4a579b29f2f95d93677dfe",
-    "tools/generate_canonical_lean_graph.ps1": "1542ad656d55047511976aa399eea8d95ea6dec25af2e847b7707b5dea51f79d",
+    "lean/CanonicalGraph.lean": "4044136e4ca6b62a8b8037e6e46b325b3357f81a39645e379bb4b00d747978ac",
+    "tools/generate_canonical_lean_graph.ps1": "448d08eea078b67d99ab298d01369d025221cd2d0a5395b6b65368bf915c8612",
     "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
   },
-  "boundary": "This audit verifies that Lean detects the current grade and semantic gaps. It is not a proof that God is and it is not a closed canon lock."
+  "boundary": "The structural graph gate passes. This is not a proof that God is, not a strict semantic proof of BC2, and not a final version seal."
 }

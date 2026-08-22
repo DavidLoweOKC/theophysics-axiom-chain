@@ -1,30 +1,42 @@
 # Count Reconciliation — 2026-08-22
 
-## Result
+## Reconciled result
 
-The count gate is open. The currently reproducible sources do not support a
-claim that all 198 master entries have been enumerated in Lean.
+The supplied graph audit parses 191 data rows with `SC-*` represented once.
+The source corpus enumerates six concrete scale records:
 
-| Artifact | Count | Meaning |
-|---|---:|---|
-| `AXIOMS_PART1_MODE_CLASSIFICATION.md` | 192 | 191 kept rows plus one `DROP_DUPLICATE` row |
-| `AXIOMS_CANONICAL_ONLY.md` | 191 | Enumerable kept source records |
-| `CanonicalGraph.lean` | 192 | Synthetic `A0` plus 191 source records |
-| `AXIOM CHAIN MASTER v3.md` | 198 declared | Narrative summary; not an enumerable 198-row registry |
+- `SC-QUANTUM`
+- `SC-PHYSICAL`
+- `SC-NEURAL`
+- `SC-INDIVIDUAL`
+- `SC-SOCIAL`
+- `SC-COSMIC`
 
-## Explicitly identifiable v3 changes absent from the 191-row assembly
+Replacing the compact row with those six adds five records, yielding 196 kept
+entries. The historical `DROP_DUPLICATE` row yields 197 bookkeeping entries.
+Lean excludes that dropped row and adds synthetic `A0`, also yielding 197
+formal claims.
 
-- `A1.0` is added.
-- `T3.2` is added.
-- `BC4` is replaced by `BC4a` and `BC4b` (net one additional record).
-- The duplicate row is deliberately absent from the canonical-only assembly.
+| Mode | Current members |
+|---|---:|
+| `AX_CORE` | 4 |
+| `AX_DERIVED` | 0 |
+| `AX_SCAFFOLD` | 43 |
+| `FW_EXTENDED` | 114 |
+| `HY_EVIDENCE` | 35 |
+| **Kept total** | **196** |
+| `DROP_DUPLICATE` bookkeeping row | 1 |
+| **Bookkeeping total** | **197** |
 
-These facts explain part, but not all, of the declared difference. The master
-does not provide a unique 198-row ledger from which the remaining delta can be
-named without inference. No missing IDs are invented here.
+The former 198 total required seven SC records, but only six can be enumerated.
+It was one high. No seventh scale record was invented.
 
-## Lock condition
+## Classification reconciliation
 
-Canon lock requires either an authoritative 198-row registry with unique IDs,
-or a corrected master count with written delta accounting. The generator must
-then consume that registry directly and prove the resulting claim count.
+- `T3.1`, `BC2`, `BC7`, and `BC8` moved from `AX_DERIVED` to
+  `FW_EXTENDED` under the weakest-premise ceiling.
+- `D11.1` moved from `AX_SCAFFOLD` to `FW_EXTENDED`, following the later
+  master ruling that calls it a measurement bridge.
+- `PERSONHOOD` is now `ID7.2`.
+- `AX_DERIVED` remains a live grade with zero current members. Re-entry requires
+  core-grade premises or written entailment from bedrock.

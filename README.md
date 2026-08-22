@@ -7,9 +7,9 @@ The project tests the internal precision of the framework. Formal checks evaluat
 ## Canonical sources
 
 - `docs/canonical/AXIOM_CHAIN_MASTER_v3.md` — active master
-- `docs/canonical/AXIOMS_CANONICAL_ONLY.md` — canonical-only compilation
+- `docs/canonical/AXIOMS_CANONICAL_ONLY.md` — preserved 2026-08-20 source assembly; its embedded registry grades are historical, not the current v3 audit rulings
 - `docs/canonical/AXIOM_CHAIN_CANONICAL_WORKBOOK.xlsx` — synchronized Lean ledger workbook
-- `docs/canonical/COUNT_RECONCILIATION_2026-08-22.md` — open 198-versus-191 count audit
+- `docs/canonical/COUNT_RECONCILIATION_2026-08-22.md` — resolved count reconciliation
 - `docs/canonical/AXIOM_CHAIN_MASTER_v2.2.md` — preserved prior version
 
 ## Tools
@@ -29,12 +29,15 @@ from convergence into A0.
 
 ## Current audit status
 
-The canon lock is open. Lean 4.33.0 validates the one-root structure,
-endpoints, and acyclicity, but the weakest-premise gate rejects
-`A2.2 → T3.1`. The unresolved strict claims are `T3.1` and `BC2`.
-The BC2 semantic module proves that the current T3 premises are insufficient,
-then proves the weaker external-restorer conclusion once causal exhaustiveness
-is supplied. Identifying that restorer as Grace remains an explicit bridge.
+The corrected structural gate passes on Lean 4.33.0: 197 formal claims, 262
+declared typed edges, one designated root, resolved endpoints, acyclic
+entailment, and weakest-premise propagation. `AX_DERIVED` remains a live grade
+with zero current members; T3.1, BC2, BC7, and BC8 are framework-grade. The BC2
+semantic module proves that the current T3 premises are insufficient, then
+proves the weaker external-restorer conclusion once causal exhaustiveness is
+supplied. Identifying that restorer as Grace remains an explicit bridge. Final
+version seal is pending because no authoritative `VERSION_REGISTRY.yaml` was
+located.
 
 ## Preservation boundary
 
