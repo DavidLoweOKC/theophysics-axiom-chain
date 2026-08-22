@@ -1,43 +1,51 @@
 {
-  "lock_schema": "1.0.0",
-  "locked_at": "2026-08-22",
+  "lock_schema": "1.1.0",
+  "audited_at": "2026-08-22",
+  "status": "open",
   "architecture": "one-root-epistemic-firewall",
   "governing_root": {
     "id": "A0",
     "statement": "God is",
-    "count": 1
+    "count": 1,
+    "representation": "graph-data-not-logical-axiom"
   },
   "projection": {
     "source_records": 191,
     "formal_claims": 192,
     "typed_edges": 300,
-    "legacy_multi_root_candidates_reclassified_as_bridges": [
-      "A5.1",
-      "BC4",
-      "BC6",
-      "BC7",
-      "BC8"
-    ]
+    "declared_master_count": 198,
+    "count_reconciled": false
   },
   "validation": {
-    "lean_version": "4.31.0",
+    "lean_version": "4.33.0",
     "compile_exit_code": 0,
     "exactly_one_root": true,
     "all_edge_endpoints_exist": true,
     "entailment_graph_acyclic": true,
-    "all_strict_claims_trace_to_A0": true,
-    "unrooted_strict_claims": [],
-    "epistemic_firewall_passes": true,
-    "canon_ready": true,
-    "sorry_admit_axiom_opaque_scan": "clear",
+    "grade_propagation_passes": false,
+    "grade_violations": [["A2.2", "T3.1"]],
+    "all_strict_claims_trace_to_A0": false,
+    "unrooted_strict_claims": ["T3.1", "BC2"],
+    "bc6_strict_descendants": [],
+    "canon_ready": false,
+    "sorry_admit_declared_axiom_scan": "clear",
     "printed_theorem_axiom_dependencies": "none"
+  },
+  "semantic_boundary": {
+    "t3_1_plus_t3_2_entails_external_restorer": false,
+    "countermodel_verified": true,
+    "external_restorer_with_causal_exhaustiveness": true,
+    "external_restorer_identified_as_grace": "bridge-premise-required"
   },
   "sha256": {
     "docs/canonical/AXIOMS_CANONICAL_ONLY.md": "2707631276d56b28f8be5516d7a332a6976cc27c06cc28a45c1fd37fc899889d",
-    "lean/EpistemicFirewall.lean": "75d4a8c83e86d20c636f6302610d569d36173e752659bbc7ce911151f86647b9",
-    "lean/CanonicalGraph.lean": "dfb636a6c23e53a976146a1c2e0fbdc6885caef67b18b987b9c8b225fc6bf493",
-    "tools/generate_canonical_lean_graph.ps1": "6c46d69d01361e4374ffb7a2c799f25b313ed978868b4ebebbfb925d473b1eed",
-    "lean-toolchain": "efac0b94923b2d8b6840cd35be9177ad0fc5ab2332f4f4311c98712cee92fdee"
+    "docs/canonical/AXIOM_CHAIN_MASTER_v3.md": "285fde61186f2287acc214e2fb047c65d0b3e401923ea02172c30adea5ae58ab",
+    "docs/canonical/AXIOM_CHAIN_CANONICAL_WORKBOOK.xlsx": "a4a124b19848dff5e2675d7c5ad23ea5aa250bf6f506a8061d2fe81f934cb2d4",
+    "lean/EpistemicFirewall.lean": "f27f1129f7613c9337a5bf2b06c9fa8cf9d02a68f5fc79ffe30a93df6eaa75f7",
+    "lean/T3GraceSemantics.lean": "979cfc42141c7d66b210b612cd38474cdb9e644907a483ddb8ed120b81cb0651",
+    "lean/CanonicalGraph.lean": "e98e1c784644ac863785aa0b73b743c64c877d111d4a579b29f2f95d93677dfe",
+    "tools/generate_canonical_lean_graph.ps1": "1542ad656d55047511976aa399eea8d95ea6dec25af2e847b7707b5dea51f79d",
+    "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
   },
-  "boundary": "This lock certifies graph architecture, epistemic typing, provenance hashes, and executable Lean invariants. Candidate claims remain candidates; it does not convert theological, empirical, bridge, or model claims into strict proofs."
+  "boundary": "This audit verifies that Lean detects the current grade and semantic gaps. It is not a proof that God is and it is not a closed canon lock."
 }

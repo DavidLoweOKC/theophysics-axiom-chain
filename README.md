@@ -8,6 +8,8 @@ The project tests the internal precision of the framework. Formal checks evaluat
 
 - `docs/canonical/AXIOM_CHAIN_MASTER_v3.md` — active master
 - `docs/canonical/AXIOMS_CANONICAL_ONLY.md` — canonical-only compilation
+- `docs/canonical/AXIOM_CHAIN_CANONICAL_WORKBOOK.xlsx` — synchronized Lean ledger workbook
+- `docs/canonical/COUNT_RECONCILIATION_2026-08-22.md` — open 198-versus-191 count audit
 - `docs/canonical/AXIOM_CHAIN_MASTER_v2.2.md` — preserved prior version
 
 ## Tools
@@ -15,6 +17,7 @@ The project tests the internal precision of the framework. Formal checks evaluat
 - `tools/build_dependency_reconciliation.py`
 - `tools/build_sequential_axioms.ps1`
 - `lean/EpistemicFirewall.lean` — executable claim-kind firewall for the one-root architecture
+- `lean/T3GraceSemantics.lean` — BC2 countermodel and strengthened external-restorer theorem
 
 ## Epistemic firewall
 
@@ -24,13 +27,14 @@ and open problem. Its regression checks reject disclosure or convergence as a
 strict premise, reject open claims as proof support, and reject reverse flow
 from convergence into A0.
 
-## Current formalization priorities
+## Current audit status
 
-1. Validate node references and typed edges.
-2. Reject dependency cycles.
-3. Distinguish entailment from definition, assumption, testing, falsification, and identification.
-4. Enforce epistemic-grade inheritance.
-5. Stress-test A2.1, T3.1, T3.2, BC2, BC4a, and BC6 kill propagation.
+The canon lock is open. Lean 4.33.0 validates the one-root structure,
+endpoints, and acyclicity, but the weakest-premise gate rejects
+`A2.2 → T3.1`. The unresolved strict claims are `T3.1` and `BC2`.
+The BC2 semantic module proves that the current T3 premises are insufficient,
+then proves the weaker external-restorer conclusion once causal exhaustiveness
+is supplied. Identifying that restorer as Grace remains an explicit bridge.
 
 ## Preservation boundary
 

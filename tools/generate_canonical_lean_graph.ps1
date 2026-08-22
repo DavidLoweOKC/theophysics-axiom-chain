@@ -34,6 +34,8 @@ $idPattern = '(?<![A-Za-z0-9_.-])(' + (($ids | Sort-Object Length -Descending | 
 
 function Claim-Kind([string]$id, [string]$mode) {
   if ($id -eq 'A1.1') { return 'strictDerivation' }
+  # Newer canonical ruling: A2.2 is framework, not a strict theorem.
+  if ($id -eq 'A2.2') { return 'bridge' }
   # One-root canon override: these legacy multi-root rows remain visible as
   # candidates, but they are bridges rather than independent strict axioms.
   if ($id -in @('A5.1', 'BC4', 'BC6', 'BC7', 'BC8')) { return 'bridge' }
@@ -48,7 +50,7 @@ function Claim-Kind([string]$id, [string]$mode) {
 }
 
 function Edge-Kind([string]$id, [string]$mode) {
-  if ($id -in @('A5.1', 'BC4', 'BC6', 'BC7', 'BC8')) { return 'assumes' }
+  if ($id -in @('A2.2', 'A5.1', 'BC4', 'BC6', 'BC7', 'BC8')) { return 'assumes' }
   switch ($mode) {
     'AX_CORE' { 'entails' }
     'AX_DERIVED' { 'entails' }
@@ -123,18 +125,24 @@ $out = @(
   'theorem exactly_one_root : hasExactlyA0AsRoot canonicalClaims = true := by decide'
   'theorem endpoints_exist : allEdgeEndpointsExist canonicalClaims canonicalEdges = true := by decide'
   'theorem entailment_graph_is_acyclic : entailmentAcyclic canonicalClaims canonicalEdges = true := by decide'
-  'theorem strict_chain_fully_traces_to_A0 : strictClaimsTraceToA0 canonicalClaims canonicalEdges = true := by decide'
-  'theorem current_projection_is_canon_ready : canonReady canonicalClaims canonicalEdges = true := by decide'
+  'theorem grade_propagation_detects_current_violation : gradePropagationValid canonicalEdges = false := by decide'
+  'theorem strict_chain_has_unresolved_claims : strictClaimsTraceToA0 canonicalClaims canonicalEdges = false := by decide'
+  'theorem bc6_ceiling_has_no_strict_descendants : strictDescendantsOf canonicalClaims canonicalEdges claim_BC6 = [] := by decide'
+  'theorem canon_lock_remains_open : canonReady canonicalClaims canonicalEdges = false := by decide'
   ''
   '#eval (unrootedStrictClaims canonicalClaims canonicalEdges).map (fun claim => claim.id)'
+  '#eval (gradeViolations canonicalEdges).map (fun edge => (edge.source.id, edge.target.id))'
+  '#eval (strictDescendantsOf canonicalClaims canonicalEdges claim_BC6).map (fun claim => claim.id)'
   ''
   '#print axioms claim_count'
   '#print axioms declared_edge_count'
   '#print axioms exactly_one_root'
   '#print axioms endpoints_exist'
   '#print axioms entailment_graph_is_acyclic'
-  '#print axioms strict_chain_fully_traces_to_A0'
-  '#print axioms current_projection_is_canon_ready'
+  '#print axioms grade_propagation_detects_current_violation'
+  '#print axioms strict_chain_has_unresolved_claims'
+  '#print axioms bc6_ceiling_has_no_strict_descendants'
+  '#print axioms canon_lock_remains_open'
   ''
   'end Theophysics.CanonicalGraph'
 )

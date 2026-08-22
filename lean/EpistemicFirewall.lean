@@ -88,6 +88,18 @@ def validFirewallEdge (edge : Edge) : Bool :=
 def validGraph (edges : List Edge) : Bool :=
   edges.all validFirewallEdge
 
+/-- Every strict entailment must respect the weakest-premise ceiling. -/
+def gradePropagationValid (edges : List Edge) : Bool :=
+  edges.all fun edge =>
+    if edge.kind == .entails && edge.target.kind == .strictDerivation then
+      eligibleStrictKind edge.source && statusCanSupport edge.source edge.target
+    else true
+
+def gradeViolations (edges : List Edge) : List Edge :=
+  edges.filter fun edge =>
+    edge.kind == .entails && edge.target.kind == .strictDerivation &&
+    !(eligibleStrictKind edge.source && statusCanSupport edge.source edge.target)
+
 def hasClaim (claims : List Claim) (claim : Claim) : Bool :=
   claims.contains claim
 
@@ -185,11 +197,28 @@ theorem bridge_t3_2_cannot_masquerade_as_strict_bc2_premise :
 def entailmentSuccessors (edges : List Edge) (claim : Claim) : List Claim :=
   (edges.filter fun edge => edge.source == claim && edge.kind == .entails).map (·.target)
 
+def propagatesCeiling (kind : EdgeKind) : Bool :=
+  kind == .entails || kind == .defines || kind == .assumes || kind == .identifies
+
+def supportSuccessors (edges : List Edge) (claim : Claim) : List Claim :=
+  (edges.filter fun edge => edge.source == claim && propagatesCeiling edge.kind).map (·.target)
+
 def reachableWithin (edges : List Edge) : Nat → Claim → Claim → Bool
   | 0, _, _ => false
   | fuel + 1, source, target =>
       (entailmentSuccessors edges source).any fun next =>
         next == target || reachableWithin edges fuel next target
+
+def supportReachableWithin (edges : List Edge) : Nat → Claim → Claim → Bool
+  | 0, _, _ => false
+  | fuel + 1, source, target =>
+      (supportSuccessors edges source).any fun next =>
+        next == target || supportReachableWithin edges fuel next target
+
+def strictDescendantsOf (claims : List Claim) (edges : List Edge) (source : Claim) : List Claim :=
+  claims.filter fun claim =>
+    claim.kind == .strictDerivation &&
+    supportReachableWithin edges claims.length source claim
 
 def entailmentAcyclic (claims : List Claim) (edges : List Edge) : Bool :=
   claims.all fun claim => !reachableWithin edges claims.length claim claim
@@ -210,7 +239,8 @@ def canonReady (claims : List Claim) (edges : List Edge) : Bool :=
   allEdgeEndpointsExist claims edges &&
   entailmentAcyclic claims edges &&
   strictClaimsTraceToA0 claims edges &&
-  validGraph edges
+  validGraph edges &&
+  gradePropagationValid edges
 
 def t3Claims : List Claim :=
   [coherenceMeasure, coherenceFunctional, T3_1, T3_2, BC2]

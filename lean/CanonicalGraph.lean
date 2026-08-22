@@ -10,7 +10,7 @@ open Theophysics.EpistemicFirewall
 def claim_A1_1 : Claim := { id := "A1.1", kind := .strictDerivation, status := .candidate }
 def claim_A1_2 : Claim := { id := "A1.2", kind := .strictDerivation, status := .candidate }
 def claim_A2_1 : Claim := { id := "A2.1", kind := .strictDerivation, status := .candidate }
-def claim_A2_2 : Claim := { id := "A2.2", kind := .strictDerivation, status := .candidate }
+def claim_A2_2 : Claim := { id := "A2.2", kind := .bridge, status := .candidate }
 def claim_A5_1 : Claim := { id := "A5.1", kind := .bridge, status := .candidate }
 def claim_BC4 : Claim := { id := "BC4", kind := .bridge, status := .candidate }
 def claim_BC6 : Claim := { id := "BC6", kind := .bridge, status := .candidate }
@@ -204,7 +204,7 @@ def canonicalClaims : List Claim :=
   , { id := "A1.1", kind := .strictDerivation, status := .candidate }
   , { id := "A1.2", kind := .strictDerivation, status := .candidate }
   , { id := "A2.1", kind := .strictDerivation, status := .candidate }
-  , { id := "A2.2", kind := .strictDerivation, status := .candidate }
+  , { id := "A2.2", kind := .bridge, status := .candidate }
   , { id := "A5.1", kind := .bridge, status := .candidate }
   , { id := "BC4", kind := .bridge, status := .candidate }
   , { id := "BC6", kind := .bridge, status := .candidate }
@@ -398,7 +398,7 @@ def canonicalEdges : List Edge :=
   [ { source := A0, target := claim_A1_1, kind := .entails }
   , { source := claim_A1_1, target := claim_A1_2, kind := .entails }
   , { source := claim_A1_3, target := claim_A2_1, kind := .entails }
-  , { source := claim_A2_1, target := claim_A2_2, kind := .entails }
+  , { source := claim_A2_1, target := claim_A2_2, kind := .assumes }
   , { source := claim_A1_1, target := claim_A1_3, kind := .entails }
   , { source := claim_A1_2, target := claim_A1_3, kind := .entails }
   , { source := claim_A2_2, target := claim_T3_1, kind := .entails }
@@ -702,17 +702,23 @@ theorem declared_edge_count : canonicalEdges.length = 300 := by decide
 theorem exactly_one_root : hasExactlyA0AsRoot canonicalClaims = true := by decide
 theorem endpoints_exist : allEdgeEndpointsExist canonicalClaims canonicalEdges = true := by decide
 theorem entailment_graph_is_acyclic : entailmentAcyclic canonicalClaims canonicalEdges = true := by decide
-theorem strict_chain_fully_traces_to_A0 : strictClaimsTraceToA0 canonicalClaims canonicalEdges = true := by decide
-theorem current_projection_is_canon_ready : canonReady canonicalClaims canonicalEdges = true := by decide
+theorem grade_propagation_detects_current_violation : gradePropagationValid canonicalEdges = false := by decide
+theorem strict_chain_has_unresolved_claims : strictClaimsTraceToA0 canonicalClaims canonicalEdges = false := by decide
+theorem bc6_ceiling_has_no_strict_descendants : strictDescendantsOf canonicalClaims canonicalEdges claim_BC6 = [] := by decide
+theorem canon_lock_remains_open : canonReady canonicalClaims canonicalEdges = false := by decide
 
 #eval (unrootedStrictClaims canonicalClaims canonicalEdges).map (fun claim => claim.id)
+#eval (gradeViolations canonicalEdges).map (fun edge => (edge.source.id, edge.target.id))
+#eval (strictDescendantsOf canonicalClaims canonicalEdges claim_BC6).map (fun claim => claim.id)
 
 #print axioms claim_count
 #print axioms declared_edge_count
 #print axioms exactly_one_root
 #print axioms endpoints_exist
 #print axioms entailment_graph_is_acyclic
-#print axioms strict_chain_fully_traces_to_A0
-#print axioms current_projection_is_canon_ready
+#print axioms grade_propagation_detects_current_violation
+#print axioms strict_chain_has_unresolved_claims
+#print axioms bc6_ceiling_has_no_strict_descendants
+#print axioms canon_lock_remains_open
 
 end Theophysics.CanonicalGraph

@@ -1,6 +1,12 @@
-# AXIOM CHAIN MASTER v2
+# AXIOM CHAIN MASTER v3
 
 > **Canonical classification source:** [[AXIOMS_PART1_MODE_CLASSIFICATION]] **Architecture:** [[___AXIOM/___THE_AXIOM_CHAIN/Secondary/CONSILIENCE_ATLAS_UNIFIED_SYSTEM_CANON_v1_0_FREEZE_CANDIDATE]] — FROZEN Uses proper IDs (A1.1, D2.1, T3.1, BC4a) not flat AX-### numbering.
+
+> **LEAN AUDIT STATUS (2026-08-22): CANON LOCK OPEN.** The Lean projection has one designated graph root, `A0 — God is`, and zero Lean axiom dependencies in its structural theorems. This does **not** prove `God is` from no assumptions; `A0` is currently graph data, not a proposition. The older "four irreducible primitives" language below is retained as historical chain prose and is superseded for the Lean architecture by the one-root ruling.
+>
+> **Current machine findings:** Lean 4.33.0 compiles the firewall, semantic boundary, and 192-claim/300-edge projection with no `sorry`, `admit`, or declared Lean `axiom`. Grade propagation correctly rejects `A2.2 → T3.1` because `A2.2` is `FW_EXTENDED` while `T3.1` is presented as derived. Consequently `T3.1` and `BC2` are unresolved strict claims and the canon lock remains open. The semantic module supplies a countermodel to the claim that T3.1 + T3.2 alone yields an external restorer; causal exhaustiveness closes the external-restorer inference, while identifying that restorer as Grace remains a separate theological bridge.
+>
+> **Count status:** the 198-entry summary is not yet reconciled to an enumerable 198-row registry. The current canonical assembly contains 191 source records; Lean adds synthetic A0 for 192 formal claims. Explicit v3 additions/splits absent from that assembly include `A1.0`, `T3.2`, and the replacement of `BC4` by `BC4a` plus `BC4b`. The declared six-record delta cannot yet be named from an authoritative row ledger, so count reconciliation remains an open gate.
 
 ---
 

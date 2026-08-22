@@ -1,53 +1,41 @@
-# One-Root Canon Lock — 2026-08-22
+# One-Root Canon Audit — 2026-08-22
 
-## Locked result
+## Status: OPEN
 
-The canonical projection passes the Lean 4 one-root epistemic firewall.
+The earlier lock result is revoked. It certified structural checks before the
+weakest-premise grade rule was implemented.
 
-- Governing root: `A0 — God is`
-- Canonical source records: `191`
-- Formal claims: `192` (`A0` plus 191 records)
+## Reproduced result
+
+- Lean: `4.33.0`
+- Source records: `191`
+- Formal graph claims: `192` (`A0` plus 191 source records)
 - Typed edges: `300`
-- Unrooted strict claims: `[]`
-- Lean: `4.31.0`
-- Compile exit: `0`
-- `sorry` / `admit` / declared `axiom` / `opaque`: none
-- Printed theorem axiom dependencies: none
+- Logical axiom dependencies printed by Lean: none
+- `sorry` / `admit` / declared Lean `axiom`: none
+- One designated graph root: pass (`A0 — God is`)
+- Endpoints: pass
+- Entailment acyclicity: pass
+- Grade propagation: **fail as expected**
+- Rejected grade edge: `A2.2 → T3.1`
+- Unresolved strict claims: `T3.1`, `BC2`
+- BC6 strict descendants under propagating dependency edges: `[]`
+- Semantic `T3.1 + T3.2 → external restorer`: refuted by countermodel
+- External restorer with causal exhaustiveness: proved
+- External restorer = Grace: explicit bridge premise required
+- Count reconciliation: open (`198` declared versus `191` enumerable records)
 
-## Conservative one-root ruling
+## BC6 ceiling ruling
 
-The source assembly retained five legacy multi-root classifications. The formal projection preserves their records but classifies them as candidate bridges rather than independent strict axioms:
+BC6 remains framework-grade. The current projection contains no strict-derived
+descendant of BC6 across entailment, definition, assumption, or identification
+edges. Its downstream theology, soul, moral, eschatology, and unification lanes
+therefore remain framework/candidate material rather than inherited strict
+proofs.
 
-- `A5.1`
-- `BC4`
-- `BC6`
-- `BC7`
-- `BC8`
+## Lock conditions
 
-No claim was deleted, admitted, or promoted by this ruling.
-
-## Gates passed
-
-1. Exactly one root exists and it is `A0`.
-2. Every typed edge endpoint exists.
-3. The entailment subgraph is acyclic.
-4. Every strict derivation has an A0 path.
-5. Disclosures, bridges, convergence claims, evidence, and open problems cannot masquerade as strict premises.
-6. Candidate-to-candidate support is recordable without automatic admission.
-7. The combined `canonReady` executable gate evaluates to `true`.
-
-## Reproduction
-
-```powershell
-& .\tools\generate_canonical_lean_graph.ps1
-Set-Location .\lean
-lean -o EpistemicFirewall.olean .\EpistemicFirewall.lean
-$env:LEAN_PATH = (Get-Location).Path
-lean .\CanonicalGraph.lean
-```
-
-The machine-readable hashes and validation result are recorded in `CANON_LOCK_ONE_ROOT_2026-08-22.json`.
-
-## Boundary
-
-This lock certifies the graph architecture, typed epistemic lanes, source provenance, and executable Lean invariants. Candidate claims remain candidates. The lock does not transform theological disclosures, empirical claims, bridges, identifications, or model results into strict proofs.
+The lock may close only after the grade edge, BC2 semantics/classification, and
+record-count discrepancy are repaired and the full suite recompiles with the
+grade gate returning true. Until then, Lean certifies detection of the open
+gates—not passage of the full axiom chain.
