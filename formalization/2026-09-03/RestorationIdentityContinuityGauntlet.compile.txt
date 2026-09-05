@@ -1,0 +1,5 @@
+warning: aesop: repository 'D:\GitHub\Faith-Thru-Physics-Lean-4-\.lake/packages\aesop' has local changes
+'RestorationIdentityContinuityGauntlet.restoration_preserves_declared_identity' does not depend on any axioms
+'RestorationIdentityContinuityGauntlet.restoration_can_change_properties_without_changing_identity' does not depend on any axioms
+'RestorationIdentityContinuityGauntlet.property_equality_does_not_entail_personal_identity' depends on axioms: [propext]
+'RestorationIdentityContinuityGauntlet.identifier_continuity_alone_does_not_entail_memory_continuity' does not depend on any axioms

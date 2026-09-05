@@ -1,0 +1,7 @@
+warning: aesop: repository 'D:\GitHub\Faith-Thru-Physics-Lean-4-\.lake/packages\aesop' has local changes
+'CostBearingTransferGauntlet.all_declared_conditions_suffice' does not depend on any axioms
+'CostBearingTransferGauntlet.authorization_is_load_bearing' does not depend on any axioms
+'CostBearingTransferGauntlet.willingness_is_load_bearing' does not depend on any axioms
+'CostBearingTransferGauntlet.adequacy_is_load_bearing' does not depend on any axioms
+'CostBearingTransferGauntlet.debt_identity_is_load_bearing' does not depend on any axioms
+'CostBearingTransferGauntlet.adequacy_does_not_force_exact_payment' does not depend on any axioms

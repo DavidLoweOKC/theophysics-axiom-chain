@@ -1,0 +1,7 @@
+warning: aesop: repository 'D:\GitHub\Faith-Thru-Physics-Lean-4-\.lake/packages\aesop' has local changes
+'SubstitutionLegitimacyGauntlet.declared_conditions_are_jointly_sufficient' does not depend on any axioms
+'SubstitutionLegitimacyGauntlet.creditor_authorization_is_load_bearing' does not depend on any axioms
+'SubstitutionLegitimacyGauntlet.substitute_consent_is_load_bearing' does not depend on any axioms
+'SubstitutionLegitimacyGauntlet.adequate_payment_is_load_bearing' does not depend on any axioms
+'SubstitutionLegitimacyGauntlet.debtor_release_is_load_bearing' does not depend on any axioms
+'SubstitutionLegitimacyGauntlet.no_double_charge_is_load_bearing' does not depend on any axioms

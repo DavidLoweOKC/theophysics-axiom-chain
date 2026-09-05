@@ -1,0 +1,6 @@
+warning: aesop: repository 'D:\GitHub\Faith-Thru-Physics-Lean-4-\.lake/packages\aesop' has local changes
+'GraceJusticeCompatibilityGauntlet.grace_and_justice_are_jointly_satisfiable' does not depend on any axioms
+'GraceJusticeCompatibilityGauntlet.arbitrary_release_does_not_satisfy_justice' does not depend on any axioms
+'GraceJusticeCompatibilityGauntlet.concealment_is_neither_truthful_justice_nor_payment' does not depend on any axioms
+'GraceJusticeCompatibilityGauntlet.justice_satisfaction_alone_does_not_force_grace' does not depend on any axioms
+'GraceJusticeCompatibilityGauntlet.same_debt_and_payment_allow_opposite_condemnation_status' does not depend on any axioms

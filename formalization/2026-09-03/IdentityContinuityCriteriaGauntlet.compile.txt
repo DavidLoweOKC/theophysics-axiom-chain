@@ -1,0 +1,7 @@
+warning: aesop: repository 'D:\GitHub\Faith-Thru-Physics-Lean-4-\.lake/packages\aesop' has local changes
+'IdentityContinuityCriteriaGauntlet.strong_continuity_is_symmetric' does not depend on any axioms
+'IdentityContinuityCriteriaGauntlet.strong_continuity_is_transitive' does not depend on any axioms
+'IdentityContinuityCriteriaGauntlet.identifier_alone_is_insufficient' depends on axioms: [propext]
+'IdentityContinuityCriteriaGauntlet.memory_alone_is_insufficient' depends on axioms: [propext]
+'IdentityContinuityCriteriaGauntlet.character_alone_is_insufficient' depends on axioms: [propext]
+'IdentityContinuityCriteriaGauntlet.causal_history_alone_is_insufficient' depends on axioms: [propext]
